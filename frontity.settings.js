@@ -1,9 +1,13 @@
+import { config } from "dotenv";
+config();
+
+console.log(process.env);
 const settings = {
   "name": "promise-frontity",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
+      "url": process.env.WP_URL,
+      "title": "Promise Institute",
       "description": "WordPress installation for Frontity development"
     }
   },
@@ -13,26 +17,10 @@ const settings = {
       "state": {
         "theme": {
           "menu": [
-            [
-              "Home",
-              "/"
-            ],
-            [
-              "Nature",
-              "/category/nature/"
-            ],
-            [
-              "Travel",
-              "/category/travel/"
-            ],
-            [
-              "Japan",
-              "/tag/japan/"
-            ],
-            [
-              "About Us",
-              "/about-us/"
-            ]
+            ["Home", "/"],
+            ["Blog", "/blog/"],
+            ["Reports", "/reports/"],
+            ["Resources", "/resources/"],
           ],
           "featured": {
             "showOnList": false,
@@ -45,7 +33,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org"
+          "api": process.env.WP_API
         }
       }
     },
