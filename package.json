@@ -13,7 +13,8 @@
   "scripts": {
     "dev": "frontity dev --dont-open-browser",
     "build": "frontity build",
-    "serve": "frontity serve"
+    "serve": "frontity serve",
+    "postinstall": "netlify-lambda install"
   },
   "prettier": {},
   "dependencies": {
@@ -22,7 +23,12 @@
     "@frontity/mars-theme": "./packages/mars-theme",
     "@frontity/tiny-router": "^1.4.4",
     "@frontity/wp-source": "^1.11.7",
+    "babel-plugin-macros": "^3.1.0",
     "dotenv": "^11.0.0",
-    "frontity": "^1.17.1"
+    "frontity": "^1.17.1",
+    "promise-theme": "file:packages/promise-theme",
+    "tailwind.macro": "^1.0.0-alpha.10",
+    "tailwindcss": "^3.0.15",
+    "twin.macro": "^2.8.2"
   }
 }

@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react"
 
 const Quote = ({quote, author}) => {
   return (
-    <div style={ { background: 'red' , color: 'white', padding: '10px'} }>
+    <div style={ { background: "red" , color: "white", padding: "10px"} }>
       <h3>{quote}</h3>
       <h5>{author}</h5>
     </div>

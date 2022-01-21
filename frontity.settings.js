@@ -1,7 +1,6 @@
 import { config } from "dotenv";
 config();
 
-console.log(process.env);
 const settings = {
   "name": "promise-frontity",
   "state": {
@@ -13,27 +12,27 @@ const settings = {
   },
   "packages": [
     {
-      "name": "@frontity/mars-theme",
-      "state": {
-        "theme": {
-          "menu": [
-            ["Home", "/"],
-            ["Blog", "/blog/"],
-            ["Reports", "/reports/"],
-            ["Resources", "/resources/"],
-          ],
-          "featured": {
-            "showOnList": false,
-            "showOnPost": false
-          }
-        }
-      }
+      "name": "promise-theme"
     },
     {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "api": process.env.WP_API
+          "api": process.env.WP_API,
+          "postTypes": [
+            {
+              type: "project",
+              endpoint: "project",
+              archive: "/projects"
+            }
+          ],
+          taxonomies: [
+            {
+              taxonomy: "project_type",
+              endpoint: "project_cat",
+              postTypeEndpoint: "project"
+            }
+          ]
         }
       }
     },
