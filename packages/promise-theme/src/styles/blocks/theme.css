@@ -1,0 +1,37 @@
+.has-text-80-font-size {
+	font-size: 80px;
+	line-height: 1.2em;
+}
+.has-text-64-font-size {
+	font-size: 64px;
+	line-height: 1.2em;
+}
+.has-text-42-font-size {
+	font-size: 42px;
+	line-height: 1.2em;
+}
+.has-text-36-font-size {
+	font-size: 36px;
+	line-height: 1.2em;
+}
+.has-text-32-font-size {
+	font-size: 32px;
+	line-height: 1.2em;
+}
+.has-text-30-font-size {
+	font-size: 30px;
+	line-height: 1.2em;
+}
+.has-text-16-font-size {
+	font-size: 16px;
+	line-height: 1.2em;
+}
+.has-text-14-font-size {
+	font-size: 14px;
+	line-height: 1.2em;
+}
+
+
+.size-full img {
+	width: 100vw;
+}

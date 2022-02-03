@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "frontity";
+import tw, { styled, css } from "twin.macro";
 
-const Link = ({ href, actions, children }) => {
+const Link = ({ href, external, actions, children }) => {
 
 	const onClick = (e) => {
 		e.preventDefault();
@@ -9,12 +10,11 @@ const Link = ({ href, actions, children }) => {
 	};
 
 	return (
-		<div>
-			<a href={href}
-				onClick={onClick}>
-				{children}
-			</a>
-		</div>
+		<a href={href}
+			target={external ? "_blank" : ""}
+			onClick={external ? undefined : onClick}>
+			{children}
+		</a>
 	);
 };
 

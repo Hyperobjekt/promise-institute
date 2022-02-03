@@ -6,18 +6,11 @@ const FeaturedImage = ({ state, id }) => {
 
   if (!media) return null;
 
-  const srcset =
-    Object.values(media.media_details.sizes)
-      // Get the url and width of each size.
-      .map((item) => [item.source_url, item.width])
-      // Recude them to a string with the format required by `srcset`.
-      .reduce(
-        (final, current, index, array) =>
-          final.concat(
-            `${current.join(" ")}w${index !== array.length - 1 ? ", " : ""}`
-          ),
-        ""
-      ) || null;
+  const srcset = Object.values(media.media_details.sizes)
+    .map((item) => [item.source_url, item.width])
+    .reduce((final, current, index, array) => final.concat(
+      `${current.join(" ")}w${index !== array.length - 1 ? ", " : ""}`
+    ), "") || null;
 
   return (
     <div>

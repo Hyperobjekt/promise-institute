@@ -1,4 +1,5 @@
-# promise-frontity
+# The Promise Institute for Human Rights at UCLA School of Law
+## Frontity Project
 
 This project was bootstrapped with [Frontity](https://frontity.org/).
 

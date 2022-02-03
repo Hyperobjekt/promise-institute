@@ -1,14 +1,17 @@
 import React from "react";
+import { connect } from "frontity";
+import tw, { styled, css } from "twin.macro";
 
 import Link from "./link";
 
-const Content = ({ post }) => {
-
+const Content = ({ post, state, actions, libraries }) => {
+	const Html2React = libraries.html2react.Component;
   return (
-  	<main>
-  		<div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+  	<main css={tw`max-w-screen-lg mx-auto`}>
+	  	{<Html2React html={post.content.rendered} />}
+  		{/*<div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />*/}
   	</main>
   );
 };
 
-export default Content;
+export default connect(Content);

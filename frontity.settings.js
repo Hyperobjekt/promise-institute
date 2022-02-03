@@ -17,13 +17,23 @@ const settings = {
     {
       "name": "@frontity/wp-source",
       "state": {
+        "theme": {
+          menu: []
+        },
         "source": {
           "api": process.env.WP_API,
+          "homepage": "home",
+          // "postsPage": "news",
           "postTypes": [
             {
               type: "project",
               endpoint: "project",
               archive: "/projects"
+            },
+            {
+              type: "report",
+              endpoint: "report",
+              archive: "/reports"
             }
           ],
           taxonomies: [
