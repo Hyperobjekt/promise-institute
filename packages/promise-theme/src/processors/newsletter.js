@@ -1,7 +1,6 @@
 import React from "react";
 import tw, { styled, css } from "twin.macro";
 import Button from "../components/button";
-// import newsletter from "@frontity/html2react/processors/newsletter";
 
 const NewsletterBlock = ({ className }) => {
 

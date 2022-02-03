@@ -1,8 +1,8 @@
 import Layout from "./components";
-// import image from "@frontity/html2react/processors/image";
 import iframeProc from "@frontity/html2react/processors/iframe";
-import paragraphProc from "./processors/paragraph";
 import imageProc from "./processors/image";
+import galleryProc from "./processors/gallery";
+import paragraphProc from "./processors/paragraph";
 import reportProc from "./processors/report";
 import learnMoreProc from "./processors/learn-more";
 import newsletterProc from "./processors/newsletter";
@@ -34,6 +34,7 @@ export default {
 		html2react: {
 			processors: [
 				imageProc,
+				galleryProc,
 				iframeProc,
 				paragraphProc,
 				reportProc,

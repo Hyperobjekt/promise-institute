@@ -13,7 +13,7 @@ module.exports = {
     // },
   	extend: {
   		spacing: {
-  			gutter: "calc( ( (100vw - 1024px) / 2 ) * -1 )"
+        gutter: "calc( ( (100vw - 1024px) / 2 ) * -1 )"
   		},
       fontSize: {
       	"80": ["80px", "1.2em"],

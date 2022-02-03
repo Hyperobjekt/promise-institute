@@ -8,11 +8,11 @@ import ButtonLink from "../components/button-link";
 const ReportBlock = (props) => {
 	const report = props["data-report"] ? JSON.parse(props["data-report"]) : null;
 	return (
-		<div className="" css={tw`flex gap-6 my-24`}>
+		<div className="" css={tw`flex flex-wrap sm:flex-nowrap gap-6 my-24`}>
 
-			<div css={tw`w-1/12`}></div>
+			<div css={tw`hidden lg:visible w-1/12`}></div>
 
-			<div css={tw`w-5/12`}>
+			<div css={tw`w-full sm:w-5/12`}>
 				{report.thumbnail ?
 					<img
 						css={tw`w-full h-auto`}
@@ -20,7 +20,7 @@ const ReportBlock = (props) => {
 				: null}
 			</div>
 
-			<div css={tw`w-5/12 flex flex-col`}>
+			<div css={tw`w-full sm:w-5/12 flex flex-col`}>
 
 				<div css={tw`my-auto`}>
 
@@ -42,7 +42,7 @@ const ReportBlock = (props) => {
 
 			</div>
 
-			<div css={tw`w-1/12`}></div>
+			<div css={tw`hidden lg:visible w-1/12`}></div>
 
 		</div>
 	)

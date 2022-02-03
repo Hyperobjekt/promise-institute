@@ -6,22 +6,29 @@ const LearnMoreBlock = (props) => {
 	const media = props["data-media"] ? JSON.parse(props["data-media"]) : null;
 	
 	return (
-		<div css={tw`flex flex-wrap lg:flex-nowrap gap-6 my-24 bg-[#EAF0F1] mx-auto lg:mx-gutter`}>
+		<div css={tw`flex flex-wrap sm:flex-nowrap gap-6 my-24 bg-[#EAF0F1] -mx-6 lg:mx-gutter`}>
 
-			<div css={tw`lg:w-1/12`}></div>
+			<div css={tw`sm:w-1/12`}></div>
 
-			<div css={tw`w-full lg:w-5/12`}>
+			<div css={tw`w-full mx-6 sm:mx-0 sm:w-5/12`}>
 				{props.children}
 			</div>
 
-			<div css={tw`lg:w-1/12`}></div>
+			<div css={tw`sm:w-1/12`}></div>
 
-			<div css={tw`w-full lg:w-5/12`}>
-				{media ?
+			<div css={tw`w-full sm:w-5/12`}>
+				<div
+					css={tw`pb-[100%]`}
+					style={{
+						backgroundImage: `url(${media ? media.sizes.full.url : ""})`,
+						backgroundSize: "cover"
+					}}>
+				</div>
+				{/*{media ?
 					<img
 						css={tw`w-full h-auto`}
 						src={media.sizes.full.url} />
-				: null}
+				: null}*/}
 			</div>
 
 		</div>
