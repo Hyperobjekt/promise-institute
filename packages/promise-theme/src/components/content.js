@@ -8,7 +8,7 @@ const Content = ({ post, state, actions, libraries }) => {
 	const Html2React = libraries.html2react.Component;
   return (
   	<main css={tw`max-w-screen-lg px-6 lg:mx-auto`}>
-	  	{<Html2React html={post.content.rendered} />}
+	  	<Html2React html={post.content.rendered} />
   		{/*<div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />*/}
   	</main>
   );

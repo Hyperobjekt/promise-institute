@@ -21,8 +21,6 @@ const socials = {
 };
 
 const SiteFooter = (x) => {
-
-	console.log(x);
 	
 	const items = x.state.source.get(`/menu/${x.state.theme.menuUrl}/`);
 

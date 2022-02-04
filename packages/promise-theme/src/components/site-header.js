@@ -10,7 +10,11 @@ import Logo from "../images/logo.svg";
 import UclaLawLogo from "../images/ucla-law-logo.svg";
 
 const SiteHeader = ({ state, post }) => {
-	const featureImage = post.featured_media ? state.source.attachment[post.featured_media] : "";
+	// const site = state.frontity;
+ //  const data = state.source.get(state.router.link);
+ //  const post = state.source[data.type][data.id];
+ //  console.log(post);
+	const featureImage = post && post.featured_media ? state.source.attachment[post.featured_media] : "";
   return (
     <header
     	css={tw`flex flex-col h-80 p-16 bg-cover bg-no-repeat bg-center text-sm text-white`}
@@ -46,7 +50,7 @@ const SiteHeader = ({ state, post }) => {
 
 	    <div css={tw`mt-auto`}>
 
-	    	<Breadcrumbs post={post} />
+	    	{post ? <Breadcrumbs post={post} /> : null}
 
 	    	{post ?
 	    		<h1 css={tw`text-80`}>

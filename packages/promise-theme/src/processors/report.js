@@ -7,16 +7,17 @@ import ButtonLink from "../components/button-link";
 
 const ReportBlock = (props) => {
 	const report = props["data-report"] ? JSON.parse(props["data-report"]) : null;
+	const image = props["data-image"] ? JSON.parse(props["data-image"]) : null;
 	return (
 		<div className="" css={tw`flex flex-wrap sm:flex-nowrap gap-6 my-24`}>
 
 			<div css={tw`hidden lg:visible w-1/12`}></div>
 
 			<div css={tw`w-full sm:w-5/12`}>
-				{report.thumbnail ?
+				{image ?
 					<img
 						css={tw`w-full h-auto`}
-						src={report.thumbnail.source_url} />
+						src={image.source_url} />
 				: null}
 			</div>
 

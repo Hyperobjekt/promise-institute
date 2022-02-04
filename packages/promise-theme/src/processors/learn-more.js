@@ -10,7 +10,7 @@ const LearnMoreBlock = (props) => {
 
 			<div css={tw`sm:w-1/12`}></div>
 
-			<div css={tw`w-full mx-6 sm:mx-0 sm:w-5/12`}>
+			<div css={tw`w-full flex justify-center flex-col mx-6 sm:mx-0 sm:w-5/12`}>
 				{props.children}
 			</div>
 
@@ -24,11 +24,6 @@ const LearnMoreBlock = (props) => {
 						backgroundSize: "cover"
 					}}>
 				</div>
-				{/*{media ?
-					<img
-						css={tw`w-full h-auto`}
-						src={media.sizes.full.url} />
-				: null}*/}
 			</div>
 
 		</div>
