@@ -1,5 +1,6 @@
 import { connect, css, Global, Head, styled } from "frontity";
 
+
 import globalStyles from "../styles/style.css";
 import coreBlocksStyles from "../styles/blocks/core.css";
 import themeBlockStyles from "../styles/blocks/theme.css";

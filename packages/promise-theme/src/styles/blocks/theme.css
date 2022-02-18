@@ -6,6 +6,14 @@
 	font-size: 64px;
 	line-height: 1.2em;
 }
+.has-text-56-font-size {
+	font-size: 56px;
+	line-height: 1.2em;
+}
+.has-text-50-font-size {
+	font-size: 50px;
+	line-height: 1.2em;
+}
 .has-text-42-font-size {
 	font-size: 42px;
 	line-height: 1.2em;
@@ -22,6 +30,10 @@
 	font-size: 30px;
 	line-height: 1.2em;
 }
+.has-text-22-font-size {
+	font-size: 22px;
+	line-height: 1.2em;
+}
 .has-text-16-font-size {
 	font-size: 16px;
 	line-height: 1.2em;
@@ -31,6 +43,57 @@
 	line-height: 1.2em;
 }
 
+
+.has-white-color {
+	color: #FFFFFF;
+}
+.has-gray-color {
+	color: #737368;
+}
+.has-gray-blue-color {
+	color: #465C69;
+}
+.has-light-blue-color {
+	color: #F5FAFD;
+}
+.has-med-blue-color {
+	color: #1C224F;
+}
+.has-dark-blue-color {
+	color: #2A3A84;
+}
+.has-ucla-blue-color {
+	color: #2674AC;
+}
+.has-yellow-color {
+	color: #FFDF35;
+}
+
+
+.has-white-background-color {
+	background-color: #FFFFFF;
+}
+.has-gray-background-color {
+	background-color: #737368;
+}
+.has-gray-blue-background-color {
+	background-color: #465C69;
+}
+.has-light-blue-background-color {
+	background-color: #F5FAFD;
+}
+.has-med-blue-background-color {
+	background-color: #1C224F;
+}
+.has-dark-blue-background-color {
+	background-color: #2A3A84;
+}
+.has-ucla-blue-background-color {
+	background-color: #2674AC;
+}
+.has-yellow-background-color {
+	background-color: #FFDF35;
+}
 
 .size-full img {
 	width: 100vw;

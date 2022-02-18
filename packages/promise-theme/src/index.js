@@ -1,11 +1,17 @@
 import Layout from "./components";
 import iframeProc from "@frontity/html2react/processors/iframe";
-import imageProc from "./processors/image";
 import galleryProc from "./processors/gallery";
 import paragraphProc from "./processors/paragraph";
-import reportProc from "./processors/report";
+import bannerProc from "./processors/banner";
+import buttonProc from "./processors/button";
 import learnMoreProc from "./processors/learn-more";
 import newsletterProc from "./processors/newsletter";
+import reportProc from "./processors/report"
+import layout1Proc from "./processors/layout-1";
+import layout2Proc from "./processors/layout-2";
+import layout3Proc from "./processors/layout-3";
+import layout4Proc from "./processors/layout-4";
+import layout5Proc from "./processors/layout-5";
 import menuHandler from "./components/handlers/menu-handler";
 
 export default {
@@ -33,13 +39,19 @@ export default {
 	libraries: {
 		html2react: {
 			processors: [
-				imageProc,
 				galleryProc,
 				iframeProc,
 				paragraphProc,
-				reportProc,
+				bannerProc,
+				buttonProc,
 				learnMoreProc,
-				newsletterProc
+				newsletterProc,
+				reportProc,
+				layout1Proc,
+				layout2Proc,
+				layout3Proc,
+				layout4Proc,
+				layout5Proc,
 			],
 		},
 		source: {

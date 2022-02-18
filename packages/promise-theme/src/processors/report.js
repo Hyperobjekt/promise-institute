@@ -7,43 +7,35 @@ import ButtonLink from "../components/button-link";
 
 const ReportBlock = (props) => {
 	const report = props["data-report"] ? JSON.parse(props["data-report"]) : null;
-	const image = props["data-image"] ? JSON.parse(props["data-image"]) : null;
 	return (
-		<div className="" css={tw`flex flex-wrap sm:flex-nowrap gap-6 my-24`}>
+		<div
+			css={tw`w-full relative my-12 pb-0 sm:pb-[45%] bg-cover bg-center text-white relative`}
+			style={{
+				backgroundImage: report.thumb ? `url(${report.thumb.source_url})` : ""
+			}}>
 
-			<div css={tw`hidden lg:visible w-1/12`}></div>
-
-			<div css={tw`w-full sm:w-5/12`}>
-				{image ?
-					<img
-						css={tw`w-full h-auto`}
-						src={image.source_url} />
-				: null}
+			<div
+				css={tw`w-full h-full flex absolute left-0 bottom-0 z-10`}
+				style={{ backgroundImage: "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)" }}>
 			</div>
 
-			<div css={tw`w-full sm:w-5/12 flex flex-col`}>
-
-				<div css={tw`my-auto`}>
-
-					<div css={tw`mb-4 uppercase text-16 font-light`}>
-						Report
-					</div>
-
+			<div css={tw`w-full h-full flex relative sm:absolute z-20 p-8`}>
+				<div css={tw`md:w-8/12 mt-auto`}>
 					{report ?
 						<div css={tw`mb-12 text-36 font-semibold`}>
 							{report.title.rendered}
 						</div>
 					: null}
-
-					<ButtonLink href="https://giving.ucla.edu/campaign/Donate.aspx" external={true}>
-						Read More
-					</ButtonLink>
-
+					<div css={tw`flex`}>
+						<ButtonLink
+							href="https://giving.ucla.edu/campaign/Donate.aspx"
+							external={true}
+							style="white-border">
+							Read our Report
+						</ButtonLink>
+					</div>
 				</div>
-
 			</div>
-
-			<div css={tw`hidden lg:visible w-1/12`}></div>
 
 		</div>
 	)

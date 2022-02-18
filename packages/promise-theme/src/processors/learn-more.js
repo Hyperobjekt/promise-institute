@@ -18,10 +18,9 @@ const LearnMoreBlock = (props) => {
 
 			<div css={tw`w-full sm:w-5/12`}>
 				<div
-					css={tw`pb-[100%]`}
+					css={tw`pb-[100%] bg-cover`}
 					style={{
-						backgroundImage: `url(${media ? media.sizes.full.url : ""})`,
-						backgroundSize: "cover"
+						backgroundImage: `url(${media ? media.sizes.full.url : ""})`
 					}}>
 				</div>
 			</div>

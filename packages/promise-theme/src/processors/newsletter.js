@@ -1,12 +1,12 @@
 import React from "react";
 import tw, { styled, css } from "twin.macro";
+
 import Button from "../components/button";
 
 const NewsletterBlock = ({ className }) => {
-
 	return (
 		<div className={className} css={tw`my-24`}>
-			<div css={tw`text-36 text-center font-bold`}>Subscribe to our e-mail updates</div>
+			<div css={tw`text-36 text-center font-bold text-gray`}>Subscribe to our e-mail updates</div>
 			<div css={tw`flex mt-16`}>
 				<div css={tw`flex mx-auto`}>
 					<div css={tw`w-80 flex border-solid border-0 border-b mr-12`}>
@@ -15,7 +15,9 @@ const NewsletterBlock = ({ className }) => {
 							placeholder="Enter your e-mail address"
 							css={tw`w-full text-16 border-0`} />
 					</div>
-					<Button>Subscribe</Button>
+					<Button>
+						Subscribe
+					</Button>
 				</div>
 			</div>
 		</div>

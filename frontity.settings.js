@@ -46,8 +46,17 @@ const settings = {
         }
       }
     },
+    // {
+      // name: "@frontity/yoast",
+      // yoast: {
+      // transformLinks: {
+      //   ignore: "^(wp-(json|admin|content|includes))|feed|comments|xmlrpc",
+      //   base: "https://wp.mysite.com",
+      // },
+    // },
     "@frontity/tiny-router",
-    "@frontity/html2react"
+    "@frontity/html2react",
+    // "@frontity/yoast",
   ]
 };
 

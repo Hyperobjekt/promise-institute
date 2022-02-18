@@ -5,8 +5,8 @@ import tw, { styled, css } from "twin.macro";
 const Button = ({ children, style = "default" }) => {
 
 	const styles = {
-		default: tw`px-8 py-2 rounded-full border-0 cursor-pointer`,
-		white: tw`px-8 py-2 rounded-full border-0 cursor-pointer`,
+		default: tw`px-8 py-2 rounded-full border-0 cursor-pointer bg-yellow`,
+		white: tw`px-8 py-2 rounded-full border-0 cursor-pointer bg-yellow`,
 	};
 
 	const onClick = (e) => {

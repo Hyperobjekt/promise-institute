@@ -10,9 +10,14 @@ Text
 1: 14
 */
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -25,6 +30,23 @@ a:visited {
   text-decoration: none;
 }
 
+p {
+ margin: 0 0 1em 0;
+}
+
+p:last-of-type {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0;
+}
+
+h1, h2, h3, h4, h5, h6,
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin: 0;
+}
+
 figure {
   margin: 0;
 }
@@ -32,6 +54,23 @@ figure {
 figure img {
   width: 100%;
   height: auto;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0 0 1em 0;
+}
+
+li ul, li ol {
+  padding: 0 0 0 1.5rem;
+}
+
+li ol li {
+  list-style: lower-alpha;
+}
+
+ul li, ol li {
+  margin: .75rem 0;
 }
 
 @layer components {

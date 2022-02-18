@@ -4,8 +4,8 @@ import tw, { styled, css } from "twin.macro";
 
 const ParagraphBlock = ({children, className}) => {
   const styles = {
-    default: tw`mr-auto mb-4 max-w-lg`,
-    "2xl": tw`mr-auto mb-4 max-w-2xl`
+    default: tw`mr-auto mb-4 max-w-lg font-serif`,
+    "2xl": tw`mr-auto mb-4 max-w-2xl font-serif`
   };
 
   let style = "default";
