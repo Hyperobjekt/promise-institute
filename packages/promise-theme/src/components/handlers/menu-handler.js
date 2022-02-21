@@ -12,7 +12,6 @@ const menuHandler = {
 
     // Parse the JSON to get the object
     const menuData = await response.json();
-    console.log(menuData);
     // Add the menu items to source.data
     const menu = state.source.data[link];
     Object.assign(menu, {
