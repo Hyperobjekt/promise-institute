@@ -6,7 +6,7 @@ const LearnMoreBlock = (props) => {
 	const media = props["data-media"] ? JSON.parse(props["data-media"]) : null;
 	
 	return (
-		<div css={tw`flex flex-wrap sm:flex-nowrap gap-6 my-24 bg-[#EAF0F1] -mx-6 lg:mx-gutter`}>
+		<div css={tw`flex flex-wrap sm:flex-nowrap gap-6 -mx-6 lg:-mx-gutter my-24 bg-[#EAF0F1]`}>
 
 			<div css={tw`sm:w-1/12`}></div>
 

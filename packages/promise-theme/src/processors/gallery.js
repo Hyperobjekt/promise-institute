@@ -2,9 +2,8 @@ import React from "react";
 import tw, { styled, css } from "twin.macro";
 
 const GalleryBlock = (props) => {
-
   return (
-    <div className={props.className} css={tw`gap-6 mb-24`}>
+    <div className={props.className} css={tw`grid grid-cols-4 gap-6 my-8`}>
      {props.children}
     </div>
   )

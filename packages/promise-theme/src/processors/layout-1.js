@@ -7,7 +7,7 @@ const Layout1Block = (props) => {
 	const body = props["data-body"] ? JSON.parse(props["data-body"]) : null;
 	
 	return (
-		<div css={tw`lg:px-0 my-24 -mx-6 lg:mx-gutter text-gray`}>
+		<div css={tw`lg:px-0 my-24 -mx-6 lg:-mx-gutter text-gray`}>
 
 			<div css={tw`max-w-screen-lg px-6 lg:mx-auto flex flex-wrap sm:flex-nowrap gap-6`}>
 
@@ -17,7 +17,7 @@ const Layout1Block = (props) => {
 
 					{title ?
 						<div
-							css={tw`text-60 font-bold`}
+							css={tw`text-60 font-bold mb-10`}
 							dangerouslySetInnerHTML={{ __html: title }}>
 						</div>
 					: null}

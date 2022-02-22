@@ -25,7 +25,7 @@ const SiteFooter = (x) => {
 	const items = x.state.source.get(`/menu/${x.state.theme.menuUrl}/`);
 
 	return (
-		<Footer>
+		<footer css={tw`flex flex-col px-12 py-16 bg-med-blue text-white`}>
 
 			<div css={tw`flex`}>
 
@@ -69,19 +69,8 @@ const SiteFooter = (x) => {
 				Copyright {(new Date()).getFullYear()} | Site by <Link href="https://www.hyperobjekt.com/" external={true}>Hyperobjekt</Link>
 			</div>
 
-		</Footer>
+		</footer>
 	);
 };
 
 export default connect(SiteFooter);
-
-const Footer = styled.footer`
-	${tw`
-		flex
-		flex-col
-		px-12
-		py-16
-		bg-gray
-		text-white
-	`};
-`;

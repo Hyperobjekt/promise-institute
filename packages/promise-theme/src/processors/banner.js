@@ -6,11 +6,10 @@ const BannerBlock = (props) => {
   
   return (
     <div
-      css={tw`pb-[50%] -mx-6 lg:mx-gutter bg-cover bg-center`}
+      css={tw`pb-[50%] -mx-6 lg:-mx-gutter bg-cover bg-center`}
       style={{
         backgroundImage: media ? `url(${media.sizes.full.url})` : null
       }}>
-     
     </div>
   )
 };

@@ -6,7 +6,7 @@ const LogoBlock = (props) => {
 	return (
 		<div
 			className="has-light-blue-background-color"
-			css={tw`flex flex-wrap sm:flex-nowrap gap-6 my-24 -mx-6 py-24 lg:mx-gutter`}>
+			css={tw`flex flex-wrap sm:flex-nowrap gap-6 my-24 -mx-6 py-24 lg:-mx-gutter`}>
 
 			<div
 				className="has-gray-blue-color"

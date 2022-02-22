@@ -13,7 +13,7 @@ module.exports = {
     // },
   	extend: {
   		spacing: {
-        gutter: "calc( ( (100vw - 1024px + 3rem) / 2 ) * -1 )"
+        gutter: "calc( (100vw - 1024px + 3rem) / 2 )"
   		},
       fontFamily: {
         "serif": ["ui-serif", "Georgia"],
