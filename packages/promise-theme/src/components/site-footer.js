@@ -44,7 +44,7 @@ const SiteFooter = (x) => {
 						We are the center of human rights education, research, and advocacy at UCLA. Join us!
 					</div>
 
-					<ButtonLink href="https://giving.ucla.edu/campaign/Donate.aspx" external={true} style="white">
+					<ButtonLink href="https://giving.ucla.edu/campaign/Donate.aspx" external={true}>
 						Donate to promise
 					</ButtonLink>
 

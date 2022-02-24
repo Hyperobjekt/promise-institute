@@ -22,7 +22,7 @@ const ReportBlock = (props) => {
 			<div css={tw`w-full h-full flex relative sm:absolute z-20 p-8`}>
 				<div css={tw`md:w-8/12 mt-auto`}>
 					{report ?
-						<div css={tw`mb-12 text-36 font-semibold`}>
+						<div css={tw`mb-12 text-36 font-med`}>
 							{report.title.rendered}
 						</div>
 					: null}

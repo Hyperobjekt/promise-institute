@@ -32,6 +32,7 @@ const ButtonLink = ({ href, external, actions, children, style = "default" }) =>
 			<a href={href}
 				target={external ? "_blank" : ""}
 				onClick={external ? undefined : onClick}
+				className="button"
 				css={styles[style]}>
 
 				{children}

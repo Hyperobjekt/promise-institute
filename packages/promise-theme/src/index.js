@@ -4,11 +4,10 @@ import galleryProc from "./processors/gallery";
 import paragraphProc from "./processors/paragraph";
 import bannerProc from "./processors/banner";
 import buttonProc from "./processors/button";
-import learnMoreProc from "./processors/learn-more";
 import newsletterProc from "./processors/newsletter";
 import reportProc from "./processors/report"
 import layout1Proc from "./processors/layout-1";
-// import layout2Proc from "./processors/layout-2";
+import layout2Proc from "./processors/layout-2";
 import layout3Proc from "./processors/layout-3";
 import layout4Proc from "./processors/layout-4";
 import layout5Proc from "./processors/layout-5";
@@ -42,13 +41,13 @@ export default {
 				galleryProc,
 				iframeProc,
 				paragraphProc,
+				
 				bannerProc,
 				buttonProc,
-				learnMoreProc,
 				newsletterProc,
 				reportProc,
 				layout1Proc,
-				// layout2Proc,
+				layout2Proc,
 				layout3Proc,
 				layout4Proc,
 				layout5Proc,

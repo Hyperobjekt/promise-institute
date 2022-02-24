@@ -30,7 +30,7 @@ const Layout4Block = (props) => {
 
 					{title ?
 						<div
-							css={tw`text-80 font-bold mb-12`}
+							css={tw`text-80 font-med mb-12`}
 							dangerouslySetInnerHTML={{ __html: title }}>
 						</div>
 					: null}

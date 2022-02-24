@@ -18,7 +18,7 @@ const Layout2Block = (props) => {
 					{title ?
 						<>
 							<h2
-								css={tw`text-80 font-bold`}
+								css={tw`text-80 font-med`}
 								dangerouslySetInnerHTML={{ __html: title }}>
 							</h2>
 							<div css={tw`w-60 h-2 mt-12 bg-white`}></div>

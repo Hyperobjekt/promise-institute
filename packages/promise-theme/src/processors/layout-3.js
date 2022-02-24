@@ -27,7 +27,7 @@ const Layout3Block = (props) => {
 
 					{title ?
 						<div
-							css={tw`max-w-xl text-50 font-bold mb-6`}
+							css={tw`max-w-xl text-50 font-med mb-6`}
 							dangerouslySetInnerHTML={{ __html: title }}>
 						</div>
 					: null}

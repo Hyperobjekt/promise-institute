@@ -6,8 +6,8 @@ const settings = {
   "state": {
     "frontity": {
       "url": process.env.WP_URL,
-      "title": "Promise Institute",
-      "description": "WordPress installation for Frontity development"
+      "title": "The Promise Institute for Human Rights at UCLA School of Law",
+      "description": "We are the center of human rights education, research, and advocacy at UCLA."
     }
   },
   "packages": [

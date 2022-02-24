@@ -1,5 +1,8 @@
 module.exports = {
-  content: ["./packages/promise-theme/src/components/**/*.{html,js}"],
+  content: [
+    "./packages/promise-theme/src/components/**/*.{html,js}",
+    "./packages/promise-theme/src/processors/**/*.{html,js}"
+  ],
   theme: {
     // fontSize: {
     //   "80": "80px",
@@ -13,11 +16,15 @@ module.exports = {
     // },
   	extend: {
   		spacing: {
-        gutter: "calc( (100vw - 1024px + 3rem) / 2 )"
+        "gutter": "calc( (100vw - 1024px + 3rem) / 2 )"
   		},
       fontFamily: {
         "serif": ["ui-serif", "Georgia"],
-        "sans": ["ui-sans-serif", "Helvetica"],
+        "sans": ["halyard-display", "sans-serif"],
+      },
+      fontWeight: {
+        "reg": 400,
+        "med": 500
       },
       fontSize: {
       	"80": ["80px", "1.2em"],

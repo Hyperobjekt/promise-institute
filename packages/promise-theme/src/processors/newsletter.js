@@ -1,5 +1,4 @@
-import React from "react";
-import tw, { styled, css } from "twin.macro";
+import tw, { css } from "twin.macro";
 
 import Submit from "../components/submit";
 
@@ -10,7 +9,7 @@ const NewsletterBlock = ({ className }) => {
 
 	return (
 		<div className={className} css={tw`my-24`}>
-			<h2 css={tw`text-36 text-center font-bold text-gray`}>
+			<h2 css={tw`text-36 text-center font-med text-gray`}>
 				Subscribe to our e-mail updates
 			</h2>
 			<div css={tw`flex mt-16`}>
@@ -19,14 +18,15 @@ const NewsletterBlock = ({ className }) => {
 					{/*<!-- Begin Mailchimp Signup Form -->*/}
 					<div id="mc_embed_signup">
 						<form
-							action={`https://ucla.us19.list-manage.com/subscribe/post?u=${mailchimpU}&id=${mailchimpId}`}
+							action={`https://ucla.us19.list-manage.com/subscribe/post?u=${mailchimpU}&amp;id=${mailchimpId}`}
 							method="post" id="mc-embedded-subscribe-form"
 							name="mc-embedded-subscribe-form"
 							className="validate"
+							css={tw`flex flex-wrap`}
 							target="_blank"
 							noValidate>
 
-							<div css={tw`flex`}>
+							<div css={tw`flex m-auto`}>
 								<label htmlFor="mce-EMAIL" css={tw`sr-only`}>
 									Email Address
 								</label>
@@ -35,13 +35,14 @@ const NewsletterBlock = ({ className }) => {
 										type="email"
 										defaultValue=""
 										placeholder="Enter your e-mail address"
-										css={tw`w-full text-16 border-0`}
+										css={tw`h-full w-full text-16 border-0`}
 										className="required email"
 										name="EMAIL"
 										id="mce-EMAIL" />
 								</div>
 								{/*<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->*/}
-								<div style={{ position: "absolute", left: "-5000px", ariaHidden: "true"}}>
+								 {/*aria-hidden={true}*/}
+								<div style={{ position: "absolute", left: "-5000px" }}>
 									<input type="text" name={`b_${mailchimpU}_${mailchimpId}`} tabIndex="-1" defaultValue="" />
 								</div>
 
@@ -51,7 +52,7 @@ const NewsletterBlock = ({ className }) => {
 									id="mc-embedded-subscribe" />
 							</div>
 
-							<div id="mce-responses" className="clear foot">
+							<div id="mce-responses" className="clear foot" css={tw`w-full mt-4 text-center`}>
 								<div className="response" id="mce-error-response" style={{ display: "none" }}></div>
 								<div className="response" id="mce-success-response" style={{ display: "none" }}></div>
 							</div>
