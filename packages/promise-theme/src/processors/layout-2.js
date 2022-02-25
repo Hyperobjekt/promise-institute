@@ -12,9 +12,7 @@ const Layout2Block = (props) => {
 		<div css={tw`py-24 lg:px-0 -mx-6 lg:-mx-gutter bg-med-blue text-white`}>
 
 			<div css={tw`max-w-screen-lg px-6 lg:mx-auto flex flex-wrap sm:flex-nowrap gap-6`}>
-
-				<div css={tw`md:w-6/12`}>
-
+				<div css={tw`md:w-5/12`}>
 					{title ?
 						<>
 							<h2
@@ -24,21 +22,18 @@ const Layout2Block = (props) => {
 							<div css={tw`w-60 h-2 mt-12 bg-white`}></div>
 						</>
 					: null}
-
 				</div>
 
-				<div css={tw`md:w-6/12`}>
+				<div css={tw`md:w-1/12`}></div>
 
+				<div css={tw`md:w-6/12`}>
 					{props.children ?
 						<div css={tw`text-20 font-serif`}>
 							{props.children}
 						</div>
 					: null}
-
 				</div>
-
 			</div>
-
 		</div>
 	)
 };

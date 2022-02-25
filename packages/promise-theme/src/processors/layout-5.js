@@ -26,28 +26,30 @@ const Layout5Block = (props) => {
 				backgroundImage: graphicSvg ? `url(${graphicSvg})` : null
 			}}>
 
-			<div css={tw`max-w-screen-lg px-6 lg:mx-auto flex flex-wrap sm:flex-nowrap gap-6`}>
-
-				<div css={tw`md:w-4/12`}></div>
-
-				<div css={tw`md:w-8/12`}>
-
-					{title ?
-						<div
-							css={tw`text-56 font-med mb-10`}
-							dangerouslySetInnerHTML={{ __html: title }}>
-						</div>
-					: null}
-
-					{body ?
-						<div
-							css={tw`text-22 font-serif`}
-							dangerouslySetInnerHTML={{ __html: body }}>
-						</div>
-					: null}
-
+			<div css={tw`max-w-screen-lg px-6 lg:mx-auto`}>
+				<div css={tw`flex flex-wrap sm:flex-nowrap`}>
+					<div css={tw`md:w-4/12`}></div>
+					<div css={tw`md:w-7/12`}>
+						{title ?
+							<div
+								css={tw`text-56 font-med mb-10`}
+								dangerouslySetInnerHTML={{ __html: title }}>
+							</div>
+						: null}
+					</div>
 				</div>
 
+				<div css={tw`flex flex-wrap sm:flex-nowrap`}>
+					<div css={tw`md:w-4/12`}></div>
+					<div css={tw`md:w-6/12`}>
+						{body ?
+							<div
+								css={tw`text-22 font-serif`}
+								dangerouslySetInnerHTML={{ __html: body }}>
+							</div>
+						: null}
+					</div>
+				</div>
 			</div>
 
 		</div>

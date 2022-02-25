@@ -19,27 +19,29 @@ const Layout3Block = (props) => {
 				style={{ backgroundImage: "linear-gradient(-90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)" }}>
 			</div>
 
-			<div css={tw`flex flex-wrap sm:flex-nowrap gap-6 px-6 relative z-20`}>
-
-				<div css={tw`md:w-6/12`}></div>
-
-				<div css={tw`md:w-6/12 text-white`}>
-
-					{title ?
-						<div
-							css={tw`max-w-xl text-50 font-med mb-6`}
-							dangerouslySetInnerHTML={{ __html: title }}>
-						</div>
-					: null}
-
-					{props.children ?
-						<div css={tw`text-16 font-serif`}>
-							{props.children}
-						</div>
-					: null}
-
+			<div css={tw`px-6 relative z-20`}>
+				<div css={tw`flex flex-wrap sm:flex-nowrap`}>
+					<div css={tw`md:w-6/12`}></div>
+					<div css={tw`md:w-6/12 text-white`}>
+						{title ?
+							<div
+								css={tw`max-w-xl text-50 font-med mb-6`}
+								dangerouslySetInnerHTML={{ __html: title }}>
+							</div>
+						: null}
+					</div>
 				</div>
 
+				<div css={tw`flex flex-wrap sm:flex-nowrap`}>
+					<div css={tw`md:w-6/12`}></div>
+					<div css={tw`md:w-5/12 text-white`}>
+						{props.children ?
+							<div css={tw`text-16 font-serif`}>
+								{props.children}
+							</div>
+						: null}
+					</div>
+				</div>
 			</div>
 
 		</div>

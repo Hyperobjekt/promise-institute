@@ -13,7 +13,6 @@ const Layout4Block = (props) => {
 		<div css={tw`my-24`}>
 
 			<div css={tw`flex flex-wrap`}>
-
 				<div css={tw`md:w-5/12 ml-auto`}>
 					{media ? 
 						<img
@@ -21,13 +20,10 @@ const Layout4Block = (props) => {
 							src={media.sizes.medium.url} />
 					 : null}
 				</div>
-
 			</div>
 
 			<div css={tw`flex flex-wrap`}>
-
 				<div css={tw`md:w-8/12`}>
-
 					{title ?
 						<div
 							css={tw`text-80 font-med mb-12`}
@@ -40,9 +36,7 @@ const Layout4Block = (props) => {
 							{props.children}
 						</div>
 					: null}
-
 				</div>
-
 			</div>
 
 		</div>

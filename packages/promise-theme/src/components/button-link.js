@@ -8,8 +8,8 @@ import ButtonArrowWhite from "../images/button-arrow-white.svg";
 const ButtonLink = ({ href, external, actions, children, style = "default" }) => {
 
 	const styles = {
-		default: tw`px-6 py-3 rounded-full bg-yellow`,
-		"white-border": tw`px-6 py-3 rounded-full border border-solid border-white`,
+		default: tw`inline-block px-6 py-3 rounded-full bg-yellow`,
+		"white-border": tw`inline-block px-6 py-3 rounded-full border border-solid border-white`,
 	};
 
 	const textStyles = {

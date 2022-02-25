@@ -25,11 +25,11 @@ const SiteFooter = (x) => {
 	const items = x.state.source.get(`/menu/${x.state.theme.menuUrl}/`);
 
 	return (
-		<footer css={tw`flex flex-col px-12 py-16 bg-med-blue text-white`}>
+		<footer css={tw`w-full bg-med-blue text-white p-12`}>
 
-			<div css={tw`flex`}>
+			<div css={tw`max-w-screen-lg h-full mt-auto lg:mx-auto flex flex-wrap`}>
 
-				<div css={tw`w-4/12`}>
+				<div css={tw`md:w-6/12`}>
 
 					<div css={tw`pb-16`}>
 						<Link href="https://law.ucla.edu/" external={true}>
@@ -40,7 +40,7 @@ const SiteFooter = (x) => {
 						</Link>
 					</div>
 
-					<div css={tw`pb-16 text-[32px] font-semibold`}>
+					<div css={tw`pb-16 text-[32px] font-med`}>
 						We are the center of human rights education, research, and advocacy at UCLA. Join us!
 					</div>
 
@@ -50,8 +50,8 @@ const SiteFooter = (x) => {
 
 				</div>
 
-				<div css={tw`w-4/12 ml-auto`}>
-					<div css={tw`space-x-2`}>
+				<div css={tw`md:w-6/12 ml-auto flex flex-col`}>
+					<div css={tw`flex justify-end space-x-2`}>
 						{Object.keys(socials).map(key => (
 							<Link href={`https://www.${key}.com/`} external={true} key={key}>
 								<img
@@ -61,12 +61,11 @@ const SiteFooter = (x) => {
 							</Link>
 						))}
 					</div>
+					<div css={tw`mt-auto text-right`}>
+						Copyright {(new Date()).getFullYear()}&nbsp;&nbsp;|&nbsp;&nbsp;Site by <Link href="https://www.hyperobjekt.com/" external={true}>Hyperobjekt</Link>
+					</div>
 				</div>
 
-			</div>
-
-			<div css={tw`text-right`}>
-				Copyright {(new Date()).getFullYear()} | Site by <Link href="https://www.hyperobjekt.com/" external={true}>Hyperobjekt</Link>
 			</div>
 
 		</footer>

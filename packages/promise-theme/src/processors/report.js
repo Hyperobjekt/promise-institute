@@ -19,7 +19,7 @@ const ReportBlock = (props) => {
 				style={{ backgroundImage: "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)" }}>
 			</div>
 
-			<div css={tw`w-full h-full flex relative sm:absolute z-20 p-8`}>
+			<div css={tw`w-full h-full flex relative sm:absolute z-20 p-12`}>
 				<div css={tw`md:w-8/12 mt-auto`}>
 					{report ?
 						<div css={tw`mb-12 text-36 font-med`}>

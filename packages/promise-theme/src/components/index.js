@@ -10,9 +10,9 @@ import Content from "./content";
 import SiteFooter from "./site-footer";
 
 const Layout = ({ state, actions, libraries }) => {
-	const site = state.frontity;
-	const data = state.source.get(state.router.link);
-	const post = state.source[data.type][data.id];
+	const site = state ? state.frontity : null;
+	const data = state && site ? state.source.get(state.router.link) : null;
+	const post = state && data ? state.source[data.type][data.id] : null;
 	return (
 		<>
 			<Head>

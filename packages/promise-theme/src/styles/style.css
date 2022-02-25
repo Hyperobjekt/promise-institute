@@ -4,6 +4,7 @@
 
 * {
   box-sizing: border-box;
+  text-rendering: geometricPrecision;
 }
 
 body {
@@ -28,6 +29,7 @@ p:last-of-type {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 1em 0;
+  font-weight: 500;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -63,6 +65,14 @@ ul li, ol li {
 
 input, button {
   font-family: "halyard-display", sans-serif;
+}
+
+p a, li a, blockquote a, figcaption a,
+p a:visited, li a:visited, blockquote a:visited, figcaption a:visited {
+  color: #2A3A84;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 /*@layer components {
