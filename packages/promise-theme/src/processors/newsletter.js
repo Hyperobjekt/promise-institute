@@ -12,7 +12,7 @@ const NewsletterBlock = ({ className }) => {
 			<h2 css={tw`text-36 text-center font-med text-gray`}>
 				Subscribe to our e-mail updates
 			</h2>
-			<div css={tw`flex mt-16`}>
+			<div css={tw`flex mt-8`}>
 				<div css={tw`flex mx-auto`}>
 
 					{/*<!-- Begin Mailchimp Signup Form -->*/}

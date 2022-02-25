@@ -9,7 +9,7 @@ const Layout3Block = (props) => {
 
 	return (
 		<div
-			css={tw`py-40 lg:px-0 -mx-6 lg:-mx-gutter text-gray bg-cover bg-center relative`}
+			css={tw`py-40 -mx-6 lg:-mx-layout text-gray bg-cover bg-center relative`}
 			style={{
 				backgroundImage: media ? `url(${media.sizes.full.url})` : ""
 			}}>

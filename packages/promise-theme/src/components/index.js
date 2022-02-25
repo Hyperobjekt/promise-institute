@@ -1,9 +1,9 @@
 import { connect, css, Global, Head, styled } from "frontity";
 import tw from "twin.macro";
 
-import globalStyles from "../styles/style.css";
-import coreBlocksStyles from "../styles/blocks/core.css";
-import themeBlockStyles from "../styles/blocks/theme.css";
+import globalStyles from "./../styles/style.css";
+import coreBlocksStyles from "./../styles/blocks/core.css";
+import themeBlockStyles from "./../styles/blocks/theme.css";
 
 import SiteHeader from "./site-header";
 import Content from "./content";

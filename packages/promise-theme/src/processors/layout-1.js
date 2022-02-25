@@ -7,31 +7,29 @@ const Layout1Block = (props) => {
 	const body = props["data-body"] ? JSON.parse(props["data-body"]) : null;
 	
 	return (
-		<div css={tw`lg:px-0 my-24 -mx-6 lg:-mx-gutter text-gray`}>
+		<div css={tw`py-24 text-gray`}>
 
-			<div css={tw`max-w-screen-lg px-6 lg:mx-auto`}>
-				<div css={tw`flex flex-wrap sm:flex-nowrap`}>
-					<div css={tw`md:w-4/12`}></div>
-					<div css={tw`md:w-8/12`}>
-						{title ?
-							<div
-								css={tw`text-60 font-reg mb-10`}
-								dangerouslySetInnerHTML={{ __html: title }}>
-							</div>
-						: null}
-					</div>
+			<div css={tw`flex flex-wrap sm:flex-nowrap`}>
+				<div css={tw`md:w-4/12`}></div>
+				<div css={tw`md:w-8/12`}>
+					{title ?
+						<div
+							css={tw`text-60 font-reg mb-10`}
+							dangerouslySetInnerHTML={{ __html: title }}>
+						</div>
+					: null}
 				</div>
+			</div>
 
-				<div css={tw`max-w-screen-lg px-6 lg:mx-auto flex flex-wrap sm:flex-nowrap`}>
-					<div css={tw`md:w-4/12`}></div>
-					<div css={tw`md:w-6/12`}>
-						{body ?
-							<div
-								css={tw`text-20 font-serif`}
-								dangerouslySetInnerHTML={{ __html: body }}>
-							</div>
-						: null}
-					</div>
+			<div css={tw`flex flex-wrap sm:flex-nowrap`}>
+				<div css={tw`md:w-4/12`}></div>
+				<div css={tw`md:w-6/12`}>
+					{body ?
+						<div
+							css={tw`text-20 font-serif`}
+							dangerouslySetInnerHTML={{ __html: body }}>
+						</div>
+					: null}
 				</div>
 			</div>
 			

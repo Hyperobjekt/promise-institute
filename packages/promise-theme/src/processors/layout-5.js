@@ -18,11 +18,11 @@ const Layout5Block = (props) => {
 	}
 	
 	return (
-		<div css={tw`py-24 lg:px-0 -mx-6 lg:-mx-gutter bg-light-blue bg-no-repeat text-gray-blue`}
+		<div css={tw`py-24 -mx-6 lg:-mx-layout bg-light-blue bg-no-repeat text-gray-blue lg:bg-left`}
 			style={{
 				backgroundSize: "500px",
-		    backgroundPositionX: "-75px",
-		    backgroundPositionY: "100%",
+				backgroundPositionX: "0",
+		    backgroundPositionY: "bottom",
 				backgroundImage: graphicSvg ? `url(${graphicSvg})` : null
 			}}>
 

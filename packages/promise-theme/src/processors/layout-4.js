@@ -10,7 +10,7 @@ const Layout4Block = (props) => {
 	const media = props["data-media"] ? JSON.parse(props["data-media"]) : null;
 	
 	return (
-		<div css={tw`my-24`}>
+		<div css={tw`py-24`}>
 
 			<div css={tw`flex flex-wrap`}>
 				<div css={tw`md:w-5/12 ml-auto`}>

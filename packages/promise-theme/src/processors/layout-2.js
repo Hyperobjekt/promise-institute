@@ -9,7 +9,7 @@ const Layout2Block = (props) => {
 	const title = props["data-title"] ? JSON.parse(props["data-title"]) : null;
 	
 	return (
-		<div css={tw`py-24 lg:px-0 -mx-6 lg:-mx-gutter bg-med-blue text-white`}>
+		<div css={tw`py-24 lg:px-0 -mx-6 lg:-mx-layout bg-med-blue text-white`}>
 
 			<div css={tw`max-w-screen-lg px-6 lg:mx-auto flex flex-wrap sm:flex-nowrap gap-6`}>
 				<div css={tw`md:w-5/12`}>

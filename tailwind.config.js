@@ -16,8 +16,11 @@ module.exports = {
     // },
   	extend: {
   		spacing: {
-        "gutter": "calc( (100vw - 1024px + 3rem) / 2 )"
+        "layout": "calc( (100vw - 1024px + 3rem) / 2 )"
   		},
+      maxWidth: {
+        "layout": "1024px"
+      },
       fontFamily: {
         "serif": ["ui-serif", "Georgia"],
         "sans": ["halyard-display", "sans-serif"],
@@ -40,6 +43,7 @@ module.exports = {
         "20": ["20px", "1.4em"],
 				"16": ["16px", "1.4em"],
 				"14": ["14px", "1.4em"],
+        "10": ["10px", "1.4em"],
       },
       colors: {
         "gray": "#737368",

@@ -51,7 +51,7 @@ const SiteFooter = (x) => {
 				</div>
 
 				<div css={tw`md:w-6/12 ml-auto flex flex-col`}>
-					<div css={tw`flex justify-end space-x-2`}>
+					<div css={tw`flex justify-end space-x-3`}>
 						{Object.keys(socials).map(key => (
 							<Link href={`https://www.${key}.com/`} external={true} key={key}>
 								<img
@@ -61,7 +61,7 @@ const SiteFooter = (x) => {
 							</Link>
 						))}
 					</div>
-					<div css={tw`mt-auto text-right`}>
+					<div css={tw`mt-auto text-10 text-right`}>
 						Copyright {(new Date()).getFullYear()}&nbsp;&nbsp;|&nbsp;&nbsp;Site by <Link href="https://www.hyperobjekt.com/" external={true}>Hyperobjekt</Link>
 					</div>
 				</div>

@@ -1,6 +1,7 @@
 import Layout from "./components";
 import iframeProc from "@frontity/html2react/processors/iframe";
 import galleryProc from "./processors/gallery";
+import headingProc from "./processors/heading";
 import paragraphProc from "./processors/paragraph";
 import bannerProc from "./processors/banner";
 import buttonProc from "./processors/button";
@@ -40,8 +41,8 @@ export default {
 			processors: [
 				galleryProc,
 				iframeProc,
+				headingProc,
 				paragraphProc,
-				
 				bannerProc,
 				buttonProc,
 				newsletterProc,
