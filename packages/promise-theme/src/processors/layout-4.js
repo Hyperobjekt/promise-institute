@@ -8,6 +8,7 @@ import ButtonLink from "../components/button-link";
 const Layout4Block = (props) => {
 	const title = props["data-title"] ? JSON.parse(props["data-title"]) : null;
 	const media = props["data-media"] ? JSON.parse(props["data-media"]) : null;
+	console.log(media);
 	
 	return (
 		<div css={tw`py-24`}>
@@ -17,7 +18,7 @@ const Layout4Block = (props) => {
 					{media ? 
 						<img
 							css={tw`w-full h-auto`}
-							src={media.sizes.medium.url} />
+							src={media.sizes.full.url} />
 					 : null}
 				</div>
 			</div>

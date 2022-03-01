@@ -13,8 +13,8 @@ import layout3Proc from "./processors/layout-3";
 import layout4Proc from "./processors/layout-4";
 import layout5Proc from "./processors/layout-5";
 
-import settingsHandler from "./components/handlers/settings";
-import menuHandler from "./components/handlers/menu";
+import settingsHandler from "./handlers/settings";
+import menuHandler from "./handlers/menu";
 
 export default {
 	name: "promise-theme",
