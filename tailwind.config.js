@@ -1,7 +1,9 @@
+const theme_dir = "./packages/promise-theme/src";
+
 module.exports = {
   content: [
-    "./packages/promise-theme/src/components/**/*.{html,js}",
-    "./packages/promise-theme/src/processors/**/*.{html,js}"
+    `${theme_dir}/components/**/*.{html,js}`,
+    `${theme_dir}/processors/**/*.{html,js}`
   ],
   theme: {
     // fontSize: {
@@ -53,6 +55,13 @@ module.exports = {
         "dark-blue": "#2A3A84",
         "ucla-blue": "#2674AC",
         "yellow": "#FFDF35",
+      },
+      backgroundImage: {
+        // "linkedin": `url(${theme_dir}/images/linkedin-logo.svg)`,
+        // "twitter": `url(${theme_dir}/images/twitter-logo.svg)`,
+        // "youtube": `url(${theme_dir}/images/youtube-logo.svg)`,
+        // "facebook": `url(${theme_dir}/images/facebook-logo.svg)`,
+        // "instagram": `url(${theme_dir}/images/instagram-logo.svg)`,
       }
     },
   },

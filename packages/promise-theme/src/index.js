@@ -12,7 +12,9 @@ import layout2Proc from "./processors/layout-2";
 import layout3Proc from "./processors/layout-3";
 import layout4Proc from "./processors/layout-4";
 import layout5Proc from "./processors/layout-5";
-import menuHandler from "./components/handlers/menu-handler";
+
+import settingsHandler from "./components/handlers/settings";
+import menuHandler from "./components/handlers/menu";
 
 export default {
 	name: "promise-theme",
@@ -30,8 +32,9 @@ export default {
 		theme: {
 			beforeSSR: async ({ state, actions }) => {
 				await Promise.all([
-					await actions.source.fetch(`/menu/${state.theme.menuUrl}/`),
-					await actions.source.fetch(`/report/`)
+					actions.source.fetch(`menu/${state.theme.menuUrl}/`),
+					actions.source.fetch(`report/`),
+					// actions.source.fetch(`promise/settings/`)
 				]);
 			},
 		},
@@ -56,7 +59,8 @@ export default {
 		},
 		source: {
 			handlers: [
-				menuHandler
+				menuHandler,
+				settingsHandler
 			],
 		},
 	},

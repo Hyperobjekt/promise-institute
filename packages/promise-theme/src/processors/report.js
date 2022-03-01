@@ -12,28 +12,32 @@ const ReportBlock = (props) => {
 			<div css={tw`md:w-1/12`}></div>
 
 			<div
-				css={tw`w-full md:w-10/12 relative my-12 pb-0 sm:pb-[45%] bg-cover bg-center text-white relative`}
+				css={tw`w-full md:w-10/12 relative my-12 bg-cover bg-center text-white`}
 				style={{
-					backgroundImage: report.thumb ? `url(${report.thumb.source_url})` : ""
+					backgroundImage:report.image_url ? `url(${report.image_url})` : ""
 				}}>
-				<div
-					css={tw`w-full h-full flex absolute left-0 bottom-0 z-10`}
-					style={{ backgroundImage: "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)" }}>
-				</div>
-				<div css={tw`w-full h-full flex relative sm:absolute z-20 p-12`}>
-					<div css={tw`md:w-8/12 mt-auto`}>
-						{report ?
-							<div css={tw`mb-12 text-36 font-med`}>
-								{report.title.rendered}
+				<div css={tw`pb-0 sm:pb-[45%]`}>
+					<div
+						css={tw`w-full h-full flex absolute left-0 bottom-0 z-10`}
+						style={{ backgroundImage: "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)" }}>
+					</div>
+					<div css={tw`w-full h-full flex relative sm:absolute z-20 p-12`}>
+						<div css={tw`md:w-8/12 mt-auto`}>
+							{report ?
+								<div css={tw`mb-12 text-36 font-med`}>
+									{report.title.rendered}
+								</div>
+							: null}
+							<div css={tw`flex`}>
+								{report.file_url ?
+									<ButtonLink
+										href={report.file_url}
+										external={true}
+										style="white-border">
+										Read our Report
+									</ButtonLink>
+								: null}
 							</div>
-						: null}
-						<div css={tw`flex`}>
-							<ButtonLink
-								href="https://giving.ucla.edu/campaign/Donate.aspx"
-								external={true}
-								style="white-border">
-								Read our Report
-							</ButtonLink>
 						</div>
 					</div>
 				</div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "frontity";
 import tw, { styled, css } from "twin.macro";
 
@@ -12,7 +12,7 @@ import YouTubeLogo from "../images/youtube-logo.svg";
 import FacebookLogo from "../images/facebook-logo.svg";
 import InstagramLogo from "../images/instagram-logo.svg";
 
-const socials = {
+const socialLogos = {
 	"linkedin": LinkedInLogo,
 	"twitter": TwitterLogo,
 	"youtube": YouTubeLogo,
@@ -20,9 +20,12 @@ const socials = {
 	"instagram": InstagramLogo
 };
 
-const SiteFooter = (x) => {
+const SiteFooter = ({ actions, libraries, state }) => {
 	
-	const items = x.state.source.get(`/menu/${x.state.theme.menuUrl}/`);
+	useEffect(() => {
+    actions.source.fetch("/promise/settings");
+  }, []);
+	const socials = { ...state.source.get("/promise/settings").social };
 
 	return (
 		<footer css={tw`w-full bg-med-blue text-white p-12`}>
@@ -53,11 +56,14 @@ const SiteFooter = (x) => {
 				<div css={tw`md:w-6/12 ml-auto flex flex-col`}>
 					<div css={tw`flex justify-end space-x-3`}>
 						{Object.keys(socials).map(key => (
-							<Link href={`https://www.${key}.com/`} external={true} key={key}>
+							<Link href={socials[key]} external={true} key={key}>
 								<img
 									css={tw`h-4`}
-									src={socials[key]}
+									src={socialLogos[key]}
 									alt="" />
+								<span css={tw`sr-only`}>
+									{key}
+								</span>
 							</Link>
 						))}
 					</div>
