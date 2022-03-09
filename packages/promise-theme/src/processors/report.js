@@ -14,7 +14,7 @@ const ReportBlock = (props) => {
 			<div
 				css={tw`w-full md:w-10/12 relative my-12 bg-cover bg-center text-white`}
 				style={{
-					backgroundImage:report.image_url ? `url(${report.image_url})` : ""
+					backgroundImage: report && report.image_url ? `url(${report.image_url})` : ""
 				}}>
 				<div css={tw`pb-0 sm:pb-[45%]`}>
 					<div
