@@ -2,7 +2,7 @@ import React from "react";
 
 const getAttrs = (props) => {
 	const attrs = {};
-	if(!props || !props.children) return attrs;
+	if(!props || !props.children || !Array.isArray(props.children)) return attrs;
 	props.children.forEach(c => {
 		if(!c.props.hasOwnProperty("data-prop")) return;
 		const key = c.props["data-prop"];
