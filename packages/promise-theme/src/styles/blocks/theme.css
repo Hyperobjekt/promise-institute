@@ -104,3 +104,9 @@
 .wp-block-gallery .wp-block-image {
 	margin-bottom: 0;
 }
+
+@media (max-width: 599px) {
+	.wp-block-column {
+		margin-bottom: 1rem;
+	}
+}

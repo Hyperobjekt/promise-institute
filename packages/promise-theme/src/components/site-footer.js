@@ -47,8 +47,8 @@ const SiteFooter = ({ actions, libraries, state }) => {
 						We are the center of human rights education, research, and advocacy at UCLA. Join us!
 					</div>
 
-					<ButtonLink href="https://giving.ucla.edu/campaign/Donate.aspx" external={true}>
-						Donate to promise
+					<ButtonLink href="https://giving.ucla.edu/campaign/Donate.aspx?SiteNum=5&fund=63893o&code=m-22930" external={true}>
+						Donate to Promise
 					</ButtonLink>
 
 				</div>
