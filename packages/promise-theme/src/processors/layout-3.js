@@ -11,7 +11,7 @@ const Layout3Block = (props) => {
 		<div
 			css={tw`py-40 -mx-6 lg:-mx-layout text-gray bg-cover bg-center relative`}
 			style={{
-				backgroundImage: media ? `url(${media.sizes.full.url})` : ""
+				backgroundImage: media && media.sizes && media.sizes.full ? `url(${media.sizes.full.url})` : ""
 			}}>
 
 			<div

@@ -14,7 +14,7 @@ const Layout4Block = (props) => {
 
 			<div css={tw`flex flex-wrap`}>
 				<div css={tw`md:w-5/12 ml-auto`}>
-					{media ? 
+					{media && media.sizes && media.sizes.medium ? 
 						<img
 							css={tw`w-full h-auto`}
 							src={media.sizes.medium.url} />
