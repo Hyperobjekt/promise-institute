@@ -1,8 +1,9 @@
 import React from "react";
 import tw, { styled, css } from "twin.macro";
+import getAttrs from "./../utils/getAttrs";
 
 const BannerBlock = (props) => {
-  const media = props["data-media"] ? JSON.parse(props["data-media"]) : null;
+  const { media } = getAttrs(props);
   
   return (
     <div
@@ -18,10 +19,10 @@ const bannerProc = {
   name: "banner",
   priority: 20,
   test: ({ props }) => props && props.className && props.className.includes("wp-block-promise-blocks-banner"),
-  processor: ({ props }) => {
+  processor: ({ props, children }) => {
     return {
       component: BannerBlock,
-      props: props,
+      props: { ...props, children },
     }
   },
 };

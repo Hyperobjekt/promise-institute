@@ -1,11 +1,10 @@
 import React from "react";
 import tw, { styled, css } from "twin.macro";
-
+import getAttrs from "./../utils/getAttrs";
 import ButtonLink from "../components/button-link";
 
 const ButtonBlock = (props) => {
-  const text = props["data-text"] ? JSON.parse(props["data-text"]) : null;
-  const url = props["data-url"] ? JSON.parse(props["data-url"]) : null;
+  const { text, url } = getAttrs(props);
 
   return (
     <ButtonLink href={url} external={true}>
