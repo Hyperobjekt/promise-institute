@@ -1,17 +1,16 @@
 import { useEffect } from "react";
 import { connect } from "frontity";
 import tw, { styled, css } from "twin.macro";
+import getAttrs from "./../utils/getAttrs";
 // import image from "@frontity/html2react/processors/image";
 
 const Layout3Block = (props) => {
-	const title = props["data-title"] ? JSON.parse(props["data-title"]) : null;
-	const media = props["data-media"] ? JSON.parse(props["data-media"]) : null;
-
+	const { title, media } = getAttrs(props);
 	return (
 		<div
 			css={tw`py-40 -mx-6 lg:-mx-layout text-gray bg-cover bg-center relative`}
 			style={{
-				backgroundImage: media && media.sizes && media.sizes.full ? `url(${media.sizes.full.url})` : ""
+				backgroundImage: media ? `url(${media.sizes.full.url})` : ""
 			}}>
 
 			<div
@@ -25,8 +24,8 @@ const Layout3Block = (props) => {
 					<div css={tw`md:w-6/12 text-white`}>
 						{title ?
 							<div
-								css={tw`max-w-xl text-50 font-med mb-6`}
-								dangerouslySetInnerHTML={{ __html: title }}>
+								css={tw`max-w-xl text-50 font-med mb-6`}>
+								{title}
 							</div>
 						: null}
 					</div>
@@ -52,10 +51,10 @@ const layout3Proc = {
 	name: "layout-3",
 	priority: 20,
 	test: ({ props }) => props && props.className && props.className.includes("wp-block-promise-blocks-layout-3"),
-	processor: ({ props }) => {
+	processor: ({ props, children }) => {
 		return {
 			component: Layout3Block,
-			props: props,
+			props: { ...props, children },
 		}
 	},
 };

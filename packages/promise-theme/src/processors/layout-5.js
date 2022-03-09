@@ -1,21 +1,14 @@
 import { useEffect } from "react";
 import { connect } from "frontity";
 import tw, { styled, css } from "twin.macro";
-
+import getAttrs from "./../utils/getAttrs";
 import ButtonLink from "../components/button-link";
-
 import GraphicTorch from "../images/graphics/torch.svg";
 
 const Layout5Block = (props) => {
-	const title = props["data-title"] ? JSON.parse(props["data-title"]) : null;
-	const body = props["data-body"] ? JSON.parse(props["data-body"]) : null;
-	const graphic = props["data-graphic"] ? JSON.parse(props["data-graphic"]) : null;
-
+	const { title, body, graphic } = getAttrs(props);
 	let graphicSvg;
-
-	if(graphic === "torch") {
-		graphicSvg = GraphicTorch;
-	}
+	if(graphic === "torch") graphicSvg = GraphicTorch;
 	
 	return (
 		<div css={tw`py-24 -mx-6 lg:-mx-layout bg-light-blue bg-no-repeat text-gray-blue lg:bg-left`}
@@ -31,9 +24,8 @@ const Layout5Block = (props) => {
 					<div css={tw`md:w-4/12`}></div>
 					<div css={tw`md:w-7/12`}>
 						{title ?
-							<div
-								css={tw`text-56 font-med mb-10`}
-								dangerouslySetInnerHTML={{ __html: title }}>
+							<div css={tw`text-56 font-med mb-10`}>
+								{title}
 							</div>
 						: null}
 					</div>
@@ -43,9 +35,8 @@ const Layout5Block = (props) => {
 					<div css={tw`md:w-4/12`}></div>
 					<div css={tw`md:w-6/12`}>
 						{body ?
-							<div
-								css={tw`text-22 font-serif`}
-								dangerouslySetInnerHTML={{ __html: body }}>
+							<div css={tw`text-22 font-serif`}>
+								{body}
 							</div>
 						: null}
 					</div>

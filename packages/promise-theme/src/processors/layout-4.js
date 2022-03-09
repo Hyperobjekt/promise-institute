@@ -1,14 +1,11 @@
 import { useEffect } from "react";
 import { connect } from "frontity";
 import tw, { styled, css } from "twin.macro";
-
+import getAttrs from "./../utils/getAttrs";
 import ButtonLink from "../components/button-link";
-// import image from "@frontity/html2react/processors/image";
 
 const Layout4Block = (props) => {
-	const title = props["data-title"] ? JSON.parse(props["data-title"]) : null;
-	const media = props["data-media"] ? JSON.parse(props["data-media"]) : null;
-	
+	const { title, media } = getAttrs(props);
 	return (
 		<div css={tw`py-24`}>
 
@@ -25,9 +22,8 @@ const Layout4Block = (props) => {
 			<div css={tw`flex flex-wrap`}>
 				<div css={tw`md:w-8/12`}>
 					{title ?
-						<div
-							css={tw`text-80 font-med mb-12`}
-							dangerouslySetInnerHTML={{ __html: title }}>
+						<div css={tw`text-80 font-med mb-12`}>
+							{title}
 						</div>
 					: null}
 
@@ -47,10 +43,10 @@ const layout4Proc = {
 	name: "layout-4",
 	priority: 20,
 	test: ({ props }) => props && props.className && props.className.includes("wp-block-promise-blocks-layout-4"),
-	processor: ({ props }) => {
+	processor: ({ props, children }) => {
 		return {
 			component: Layout4Block,
-			props: props,
+			props: { ...props, children },
 		}
 	},
 };

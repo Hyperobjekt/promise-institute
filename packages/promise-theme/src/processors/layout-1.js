@@ -1,11 +1,10 @@
 import { useEffect } from "react";
 import { connect } from "frontity";
 import tw, { styled, css } from "twin.macro";
+import getAttrs from "./../utils/getAttrs";
 
 const Layout1Block = (props) => {
-	const title = props["data-title"] ? JSON.parse(props["data-title"]) : null;
-	const body = props["data-body"] ? JSON.parse(props["data-body"]) : null;
-	
+	const { title, body } = getAttrs(props);
 	return (
 		<div css={tw`py-24 text-gray`}>
 
@@ -14,8 +13,8 @@ const Layout1Block = (props) => {
 				<div css={tw`md:w-8/12`}>
 					{title ?
 						<div
-							css={tw`text-60 font-reg mb-10`}
-							dangerouslySetInnerHTML={{ __html: title }}>
+							css={tw`text-60 font-reg mb-10`}>
+							{title}
 						</div>
 					: null}
 				</div>
@@ -26,8 +25,8 @@ const Layout1Block = (props) => {
 				<div css={tw`md:w-6/12`}>
 					{body ?
 						<div
-							css={tw`text-20 font-serif`}
-							dangerouslySetInnerHTML={{ __html: body }}>
+							css={tw`text-20 font-serif`}>
+							{body}
 						</div>
 					: null}
 				</div>
@@ -41,10 +40,10 @@ const layout1Proc = {
 	name: "layout-1",
 	priority: 20,
 	test: ({ props }) => props && props.className && props.className.includes("wp-block-promise-blocks-layout-1"),
-	processor: ({ props }) => {
+	processor: ({ props, children }) => {
 		return {
 			component: Layout1Block,
-			props: props,
+			props: { ...props, children },
 		}
 	},
 };

@@ -16,7 +16,8 @@ const ParagraphBlock = (props) => {
 
 	return (
 		parent ?
-			<p className={className} css={styles[style]}>
+			<p className={className}>
+			{/*<p className={className} css={styles[style]}>*/}
 			 {children}
 			</p>
 		: <div css={tw`flex flex-wrap`}>
