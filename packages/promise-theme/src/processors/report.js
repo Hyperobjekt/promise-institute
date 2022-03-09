@@ -29,7 +29,7 @@ const ReportBlock = (props) => {
 								</div>
 							: null}
 							<div css={tw`flex`}>
-								{report.file_url ?
+								{report && report.file_url ?
 									<ButtonLink
 										href={report.file_url}
 										external={true}
