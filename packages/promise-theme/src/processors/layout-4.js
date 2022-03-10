@@ -6,15 +6,16 @@ import ButtonLink from "../components/button-link";
 
 const Layout4Block = (props) => {
 	const { title, media } = getAttrs(props);
+	console.log(media);
 	return (
 		<div css={tw`py-24`}>
 
 			<div css={tw`flex flex-wrap`}>
 				<div css={tw`md:w-5/12 ml-auto`}>
-					{media && media.sizes && media.sizes.medium ? 
+					{media && media.sizes && media.sizes.full ? 
 						<img
 							css={tw`w-full h-auto`}
-							src={media.sizes.medium.url} />
+							src={media.sizes.full.url} />
 					 : null}
 				</div>
 			</div>
