@@ -32,7 +32,7 @@ const SiteFooter = ({ actions, libraries, state }) => {
 
 			<div css={tw`max-w-screen-lg h-full mt-auto lg:mx-auto flex flex-wrap`}>
 
-				<div css={tw`md:w-6/12`}>
+				<div css={tw`w-full md:w-6/12`}>
 
 					<div css={tw`pb-16`}>
 						<Link href="https://law.ucla.edu/" external={true}>
@@ -53,8 +53,8 @@ const SiteFooter = ({ actions, libraries, state }) => {
 
 				</div>
 
-				<div css={tw`md:w-6/12 ml-auto flex flex-col`}>
-					<div css={tw`flex justify-end space-x-3`}>
+				<div css={tw`w-full md:w-6/12 mt-16 md:mt-0 ml-auto flex flex-col`}>
+					<div css={tw`flex md:justify-end space-x-3`}>
 						{Object.keys(socials).map(key => (
 							<Link href={socials[key]} external={true} key={key}>
 								<img
@@ -67,7 +67,7 @@ const SiteFooter = ({ actions, libraries, state }) => {
 							</Link>
 						))}
 					</div>
-					<div css={tw`mt-auto text-10 text-right`}>
+					<div css={tw`mt-auto pt-4 text-10 md:text-right`}>
 						Copyright {(new Date()).getFullYear()}&nbsp;&nbsp;|&nbsp;&nbsp;Site by <Link href="https://www.hyperobjekt.com/" external={true}>Hyperobjekt</Link>
 					</div>
 				</div>
